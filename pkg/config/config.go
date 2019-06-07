@@ -107,6 +107,8 @@ type LambdaConfig struct {
 	FunctionVersion *string `yaml:"function_version,omitempty"`
 	// bless lambda regions
 	Regions []Region `yaml:"regions,omitempty"`
+	// KMS service name
+	ServiceName string `yaml:"service_name"`
 }
 
 // Telemetry to track adoption, performance, errors

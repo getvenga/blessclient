@@ -231,7 +231,7 @@ func getCert(ctx context.Context, conf *config.Config, awsClient *cziAWS.Client,
 	defer span.End()
 	kmsauthContext := &kmsauth.AuthContextV2{
 		From:     username,
-		To:       conf.LambdaConfig.FunctionName,
+		To:       conf.LambdaConfig.ServiceName,
 		UserType: "user",
 	}
 	kmsAuthCachePath, err := conf.GetKMSAuthCachePath(region.AWSRegion)
